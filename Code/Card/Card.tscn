@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4rggfp782hsv"]
+
+[ext_resource type="Texture2D" uid="uid://dlygxvb3cpgh5" path="res://Card/assets/card_atlas.png" id="1_gasdx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ma3f"]
+atlas = ExtResource("1_gasdx")
+region = Rect2(0, 0, 170, 256)
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_5u7pk"]
+
+[node name="Card" type="PanelContainer"]
+anchors_preset = -1
+anchor_right = 0.372
+anchor_bottom = 0.957
+offset_right = 0.45599365
+offset_bottom = -0.13598633
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+texture = SubResource("AtlasTexture_6ma3f")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+visible = false
+layout_mode = 2
+texture = SubResource("AnimatedTexture_5u7pk")
